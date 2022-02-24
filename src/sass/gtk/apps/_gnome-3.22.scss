@@ -26,8 +26,8 @@ $nautilus_sidebar_image: image($dark_sidebar_bg);
                                              $dark_sidebar_bg $nautilus_sidebar_size,
                                              $nautilus_borders_color $nautilus_sidebar_size,
                                              $nautilus_borders_color ($nautilus_sidebar_size + 1px),
-                                             $base_color ($nautilus_sidebar_size + 1px),
-                                             $base_color 100%);
+                                             rgba($base_color, 0.9) ($nautilus_sidebar_size + 1px),
+                                             rgba($base_color, 0.9) 100%);
 }
 
 @if $nautilus_style == 'normal' or $nautilus_style == 'glassy' {
@@ -359,7 +359,7 @@ $nautilus_sidebar_image: image($dark_sidebar_bg);
     }
 
     > stack {
-      background-color: $base_color;
+      background-color: transparent;
     }
 
     > stack:not(:only-child) {
@@ -439,7 +439,7 @@ $nautilus_sidebar_image: image($dark_sidebar_bg);
     border: none;
     min-width: 2px;
     min-height: 2px;
-    background-color: $base_color;
+    background-color: transparent;
     background-image: image($base_color);
     background-size: $wm_radius $wm_radius;
     background-position: bottom left;
@@ -507,7 +507,7 @@ preferencesgroup { // gnome 40.0 preferences window
 }
 
 .nautilus-list-view {
-  background-color: $base_color;
+  background-color: transparent;
   border-radius: 0 0 $wm_radius $wm_radius;
 
   treeview.view:not(:hover):not(:active):not(:selected) {
@@ -1450,7 +1450,7 @@ window.background.csd {
   // sidebar on gnome tweak
   list.tweak-categories {
     background-image: none;
-    background-color: rgba($dark_sidebar_bg, 1);
+    background-color: rgba($dark_sidebar_bg, 0.6);
     border-radius: 0 0 0 $wm_radius;
 
     // Themed left sidebar
