@@ -314,7 +314,7 @@ $maximized_radius_style: 0 0 $maximized_radius $maximized_radius;
   background-color: $base_color;
   transition: all 200ms $ease-out-quad;
 
-  &:hover { background-color: if($variant=='light', darken($base_color, 3%), lighten($base_color, 3%)); }
+  &:hover { background-color: if($variant=='light', darken(rgba($base_color, 0.6), 5%), lighten(rgba($base_color, 0.6), 5%)); }
 
   &:selected {
     color: $selected_fg_color;
@@ -2111,7 +2111,7 @@ $pathbar_button_checked_bg: if($variant == 'light', #808080, #b8b8b8);
       padding: 0 $container_padding;
       font-weight: bold;
       color: $_column_header_color;
-      background-color: $base_color;
+      background-color: transparent;
       background-image: none;
       box-shadow: none;
       border-style: none solid none none;
